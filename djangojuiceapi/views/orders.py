@@ -48,10 +48,11 @@ class OrderView(ViewSet):
         """
 
         order = Order.objects.get(pk=pk)
-        order.date = request.data["date"]
-        order.closed = request.data["closed"]
-        # customer_id = User.objects.get(pk=request.data["customer_id"])
-        # order.customer_id = customer_id
+        order.timestamp = request.data["timestamp"]
+        order.total = request.data["total"]
+        order.is_open = request.data["isOpen"]
+        # user_id = User.objects.get(pk=request.data["user_id"])
+        # order.user_id = user_id
   
         order.save()
         return Response(None, status=status.HTTP_204_NO_CONTENT)
