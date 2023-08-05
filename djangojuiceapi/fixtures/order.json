@@ -1,12 +1,12 @@
 [
     {
-        "model": "djangojuiceapi.item",
+        "model": "djangojuiceapi.order",
         "pk": 1,
         "fields": {
-            "name": "Leaf Blower",
-            "description": "I'm used to blow leaves!",
-            "image_url": "https://media.npr.org/assets/img/2021/01/14/gettyimages-617497668_custom-031504dd32ee6e2fdc0c004c481018f9f5aaca9c.jpg",
-            "price": 40.99
+            "is_open": false,
+            "timestamp": "2023-12-25",
+            "user_id": 1,
+            "total": 40.99
         }
     }
 ]
