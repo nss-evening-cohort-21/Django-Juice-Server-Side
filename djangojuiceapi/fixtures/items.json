@@ -1,0 +1,22 @@
+[
+  {
+      "model": "djangojuiceapi.item",
+      "pk": 1,
+      "fields": {
+          "name": "LG Juice",
+          "description": "A Lemon Ginger Juice that bitter and has a kick!!",
+          "image_url": "https://static.toiimg.com/thumb/53843446.cms?imgsize=147620&width=800&height=800",
+          "price": 7.99
+      }
+  },
+      {
+      "model": "djangojuiceapi.item",
+      "pk": 2,
+      "fields": {
+          "name": "Beet-It",
+          "description": "A Beet, Carrot, Apple Juice a sweet treat any day!!",
+          "image_url": "https://food.fnr.sndimg.com/content/dam/images/food/fullset/2013/12/27/0/FNK_beet-carrot-apple-juice_s4x3.jpg.rend.hgtvcom.616.462.suffix/1389219145819.jpeg",
+          "price": 7.99
+      }
+  }
+]
