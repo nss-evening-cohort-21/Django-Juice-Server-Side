@@ -74,11 +74,11 @@ def register_user(request):
       'uid': user.uid,
   }
   
-  order = Order.objects.create(
-    timestamp=datetime.datetime(),
-    total=0.00,
-    user_id=user,
-    is_open=True,
-  )
+  # order = Order.objects.create(
+  #   timestamp=datetime.datetime(),
+  #   total=0.00,
+  #   user_id=user,
+  #   is_open=True,
+  # )
   
   return Response(data)
