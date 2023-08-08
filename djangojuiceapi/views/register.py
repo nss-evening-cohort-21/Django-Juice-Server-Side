@@ -74,11 +74,15 @@ def register_user(request):
       'uid': user.uid,
   }
   
-  # order = Order.objects.create(
-  #   timestamp=datetime.datetime(),
-  #   total=0.00,
-  #   user_id=user,
-  #   is_open=True,
-  # )
+  try:
+    order = Order.objects.create(
+      timestamp=datetime.now(),
+      total=0.00,
+      user_id=user,
+      is_open=True,
+    )
+  except Exception as e:
+    data = {'error': 'An error occurred while creating the order.'}
+    return Response(data, status=500)
   
-  return Response(data)
+  return Response(data, status=201)
