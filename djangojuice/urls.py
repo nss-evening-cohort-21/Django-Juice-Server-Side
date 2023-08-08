@@ -18,12 +18,13 @@ from django.conf.urls import include
 from django.contrib import admin
 from django.urls import path
 from rest_framework import routers
-from djangojuiceapi.views import UserView, register_user, check_user, ItemView, OrderView
+from djangojuiceapi.views import UserView, register_user, check_user, ItemView, OrderView, OrderItemView
 
 router = routers.DefaultRouter(trailing_slash=False)
 router.register(r'users', UserView, 'user')
 router.register(r'items', ItemView, 'item')
 router.register(r'orders', OrderView, 'order')
+router.register(r'orderitems', OrderItemView, 'orderitem')
 
 urlpatterns = [
     path('admin/', admin.site.urls),
