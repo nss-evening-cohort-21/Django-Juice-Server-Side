@@ -10,5 +10,53 @@
       "address": "80 S. Shannon",
       "uid": "Y5v81Z0IxGdUcIitqsT9fhuxsFV2"
     }
-  }
+  },
+  {
+  "model": "djangojuiceapi.user",
+    "pk": 2,
+    "fields": {
+      "first_name": "Stacey",
+      "last_name": "Vanyo",
+      "phone_number": "123-456-7899",
+      "email": "email@gmail.com",
+      "address": "Address",
+      "uid": "5Ry8gADIpvN2NKFsqTrrDK9021v1"
+    }
+  },
+  {
+    "model": "djangojuiceapi.user",
+      "pk": 3,
+      "fields": {
+        "first_name": "DeCorrean",
+        "last_name": "Davis",
+        "phone_number": "123-456-7899",
+        "email": "email@gmail.com",
+        "address": "Address",
+        "uid": "12xgDF0EzIP5u7v4mDr2wKYn5Eg1"
+      }
+    },
+    {
+      "model": "djangojuiceapi.user",
+        "pk": 4,
+        "fields": {
+          "first_name": "Evan",
+          "last_name": "Morgan",
+          "phone_number": "123-456-7899",
+          "email": "email@gmail.com",
+          "address": "Address",
+          "uid": "D9R9wnWAuCRWhKViHpPyfvjrWNA2"
+        }
+      },
+      {
+        "model": "djangojuiceapi.user",
+          "pk": 5,
+          "fields": {
+            "first_name": "Melissa",
+            "last_name": "Pennington",
+            "phone_number": "123-456-7899",
+            "email": "email@gmail.com",
+            "address": "Address",
+            "uid": "FZnoXpTJi5OOlqhYVk9YKvAdsLR2"
+          }
+        }
 ]
