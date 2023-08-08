@@ -29,7 +29,7 @@ class OrderView(ViewSet):
         Returns
         Response -- JSON serialized Orders instance
         """
-        user_id = User.objects.get(pk=request.data["user_id"])
+        user_id = User.objects.get(pk=request.data["userId"])
         
         orders = Order.objects.create(
             total=request.data["total"],
@@ -69,5 +69,5 @@ class OrderSerializer(serializers.ModelSerializer):
     """JSON Serializer For Orders"""
     class Meta:
         model = Order
-        fields = ('id', 'total', 'user_id', 'timestamp')
+        fields = ('id', 'total', 'user_id', 'timestamp', 'is_open')
         depth = 1
