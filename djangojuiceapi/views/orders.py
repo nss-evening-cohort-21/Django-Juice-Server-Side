@@ -19,8 +19,31 @@ class OrderView(ViewSet):
       
     def list(self, request):
 
-        order = Order.objects.all()
-        serializer = OrderSerializer(order, many=True)
+        orders = Order.objects.all()
+        
+        user_id = request.query_params.get('user_id', None)
+        is_open = request.query_params.get('is_open')
+        
+        if user_id is not None:
+            try:
+                # user_id query param is converted to an integer (in case it's a string)
+                user_id = int(user_id)
+            except ValueError:
+                return Response({'message': 'Invalid user_id'},
+                status=status.HTTP_400_BAD_REQUEST)
+                
+            #filter orders by user_id
+            orders = orders.filter(user_id=user_id)
+            
+        if is_open is not None:
+            if is_open.lower() in ['true', 'false']:
+                is_open = is_open.lower() == 'true'
+                orders = orders.filter(is_open=is_open)
+            else:
+                return Response({'message': 'Invalid is_open value'}, status=status.HTTP_400_BAD_REQUEST)
+        
+        
+        serializer = OrderSerializer(orders, many=True)
         return Response(serializer.data)
       
     def create(self, request):
@@ -35,7 +58,7 @@ class OrderView(ViewSet):
             total=request.data["total"],
             timestamp=request.data["timestamp"],
             is_open=request.data["isOpen"],
-            user_id=user_id,
+            user_id=user_id
         )
         serializer = OrderSerializer(orders)
         return Response(serializer.data)
@@ -51,8 +74,9 @@ class OrderView(ViewSet):
         order.timestamp = request.data["timestamp"]
         order.total = request.data["total"]
         order.is_open = request.data["isOpen"]
-        # user_id = User.objects.get(pk=request.data["user_id"])
-        # order.user_id = user_id
+        
+        user_id = User.objects.get(pk=request.data["userId"])
+        order.user_id = user_id
   
         order.save()
         return Response(None, status=status.HTTP_204_NO_CONTENT)
