@@ -1,1 +1,3 @@
-DELETE FROM djangojuiceapi_user WHERE uid="jsL7YcTV0rg3zO6Ws0sFzOF70yp1";
+DELETE FROM djangojuiceapi_user WHERE id>=6;
+
+DELETE FROM djangojuiceapi_order WHERE id>=2;
