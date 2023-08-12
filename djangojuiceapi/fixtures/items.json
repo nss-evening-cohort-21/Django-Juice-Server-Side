@@ -23,7 +23,7 @@
         "model": "djangojuiceapi.item",
         "pk": 3,
         "fields": {
-            "name": "The React-ive",
+            "name": "The Reactive",
             "description": "And Orange, Grapefruit, Lemon Juice sure to wake up your taste buds.",
             "image_url": "https://insanelygoodrecipes.com/wp-content/uploads/2021/10/Homemade-Cold-Tequila-Sunrise-in-a-Glass.jpg",
             "price": 8.50
