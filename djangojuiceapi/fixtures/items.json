@@ -1,22 +1,62 @@
 [
-  {
+    {
       "model": "djangojuiceapi.item",
       "pk": 1,
       "fields": {
           "name": "LG Juice",
-          "description": "A Lemon Ginger Juice that bitter and has a kick!!",
+          "description": "A Lemon Ginger Juice that has a bitter kick!",
           "image_url": "https://static.toiimg.com/thumb/53843446.cms?imgsize=147620&width=800&height=800",
           "price": 7.99
       }
-  },
-      {
+    },
+    {
       "model": "djangojuiceapi.item",
       "pk": 2,
       "fields": {
           "name": "Beet-It",
-          "description": "A Beet, Carrot, Apple Juice a sweet treat any day!!",
+          "description": "A Beet, Carrot, Apple Juice that's a sweet treat any day!",
           "image_url": "https://food.fnr.sndimg.com/content/dam/images/food/fullset/2013/12/27/0/FNK_beet-carrot-apple-juice_s4x3.jpg.rend.hgtvcom.616.462.suffix/1389219145819.jpeg",
           "price": 7.99
       }
-  }
+    },
+    {
+        "model": "djangojuiceapi.item",
+        "pk": 3,
+        "fields": {
+            "name": "The Reactive",
+            "description": "And Orange, Grapefruit, Lemon Juice sure to wake up your taste buds.",
+            "image_url": "https://insanelygoodrecipes.com/wp-content/uploads/2021/10/Homemade-Cold-Tequila-Sunrise-in-a-Glass.jpg",
+            "price": 8.50
+        }
+    },
+    {
+        "model": "djangojuiceapi.item",
+        "pk": 4,
+        "fields": {
+            "name": "The Django Dragon",
+            "description": "A refreshing, Dragon Fruit and Lemon zinger to get you fired up!",
+            "image_url": "https://aubreyskitchen.com/wp-content/uploads/2020/12/dragon-fruit-drink.jpg",
+            "price": 8.99
+        }
+    },
+    {
+        "model": "djangojuiceapi.item",
+        "pk": 5,
+        "fields": {
+            "name": "The Prickly Python",
+            "description": "A Prickly Pear, Cactus juice to refresh your tastebuds and wake up your mind.",
+            "image_url": "https://leelalicious.com/wp-content/uploads/2020/08/Cactus-Berry-Juice.jpg",
+            "price": 8.50
+        }
+    },
+    {
+        "model": "djangojuiceapi.item",
+        "pk": 6,
+        "fields": {
+            "name": "The Java Jam",
+            "description": "Enjoy a jammy, Acai berry explosion in your mouth with this delicious smoothie.",
+            "image_url": "https://zenfoods.com/wp-content/uploads/2022/08/acai-juice.jpg",
+            "price": 8.99
+        }
+    }
 ]
